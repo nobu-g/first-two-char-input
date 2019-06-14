@@ -1,0 +1,43 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "09a2bc11b8377c529bda641f1536f71fdd9c0a81b62c186198e4974ad0e13909"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.6"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "kytea": {
+            "hashes": [
+                "sha256:039dbb91750cc9f65d0e9b10457f9766eb03595343ab0ee1996a4bc329d51056",
+                "sha256:07704f926e46f1fa081882b04ff9bd5df33504dfec187f29a524d9fc5528a2d5",
+                "sha256:10221b66a8257ce5f8a530d5406e587909a2e643e339ed43f459d8e5e00a4805",
+                "sha256:356dfa0affd7654c62f5032664e406c5e13ab7e47e197f21df00c1b11acfc209",
+                "sha256:3b81de4ac59a32a875494e814b03cc877a89f88a999bcbe690cb1e36766fdd29",
+                "sha256:4b430ca837e772185f362263d867345ea13f26ed44f84e6e8d1bc8d177bd65f4",
+                "sha256:786bd87899abe02984576d812b663fbab3646b51960ef74d2a318007bea63f46",
+                "sha256:86935225e2187eeec332a0d3ab0c892dcd52aab42c0a0b719c7302fd42f66d88",
+                "sha256:8e6a928f2bf55e5448f9f2dc50c35f1c32b27ea1da9e5abbb4209e986519b688",
+                "sha256:9d8e81dc3b3601bbb5262a8547f93fbe65fd59bae2dcc72f728d138610340d82",
+                "sha256:bdd67f2713db2198cd6550c745fef53168cef16c3a27954cea3a5b664e69a0e7",
+                "sha256:c2e61cf348db77418baec1fb28726db7add1afd6f52173e720aee27bbc592efe",
+                "sha256:d2c40ec2496f9174f82b523e552292e79dd108f3659e544bc55abf23804f07c6",
+                "sha256:d3fb11937e395dcc2123b6d73aa4ff1517b300ecb433a66b17c8fe699956279e",
+                "sha256:e0c1c304ec383d4ce6e5430ad8fcfedbabed8740bcd43b4a14718b881ce68335",
+                "sha256:f417290ef9f7a1a76e77bcb891f538bc885d2f7c6384c4afc11ce043bad692af"
+            ],
+            "index": "pypi",
+            "version": "==0.1.4"
+        }
+    },
+    "develop": {}
+}

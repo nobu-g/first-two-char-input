@@ -10,10 +10,13 @@ def main():
     with open(args.output, 'w') as fout:
         with open(args.input, 'r') as fin:
             for line in fin:
+                if '&' in line or '/' in line:
+                    continue
                 words = line.strip().split()
                 for word in words:
                     word = word.strip(',."')
-                    fout.write(f'{word[:2]}/{word} ')
+                    if word:
+                        fout.write(f'{word[:2]}/{word} ')
                 fout.write('\n')
 
 

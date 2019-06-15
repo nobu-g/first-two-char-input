@@ -11,7 +11,10 @@ def main():
         with open(args.input, 'r') as fin:
             for line in fin:
                 words = line.strip().split()
-                fout.write(' '.join(f'{word[:2]}/{word}'for word in words) + '\n')
+                for word in words:
+                    word = word.strip(',."')
+                    fout.write(f'{word[:2]}/{word} ')
+                fout.write('\n')
 
 
 if __name__ == '__main__':

@@ -9,5 +9,4 @@ for (( i = 0; i < 10800; ++i )); do
     if [[ $(gzcat -f ${file_path} | wc -l) -gt 100 ]]; then
         gzcat ${file_path} | shuf | tee >(head -n 90 >> train.txt) | tail -n 10 >> test.txt
     fi
-
 done

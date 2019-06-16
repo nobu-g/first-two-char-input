@@ -49,46 +49,20 @@ def main():
     with open(args.test) as f:
         tests = [line.strip() for line in f]
 
-    # You can pass arguments KyTea style like following
-    # opt = "-deftag UNKNOWN!!"
-
-    # You can also set your own model
     opt = f'-model {args.model}'
 
     mk = Mykytea.Mykytea(opt)
 
     l_cor, l_sys, l_lcs = 0, 0, 0
     for line in tqdm(tests):
-        s = ''
-        for w in line.split():
-            first_char, _ = w.split('/')
-            s += first_char
-            # if len(first_char) == 1:
-            #     if s and s[-1] != ' ':
-            #         s += ' '
-            #     s += first_char + ' '
-            # elif len(first_char) == 2:
-            #     s += first_char
-            # else:
-            #     raise ValueError('The length of characters before "/" must be 1 or 2.')
-
-        # print(f'input: {s}')
-        # segmented = []
-        prediction = [word.tag[0][0][0] for word in mk.getTags(s)]
-        # for seq in s.split():
-        #     if len(seq) == 1:
-        #         segmented.append(seq)
-        #         prediction.append(seq)
-        #     else:
-        #         segmented += mk.getWS(seq)
-        #         prediction += [word.tag[0][0][0] for word in mk.getTags(seq)]
+        s = ''.join(w.split('/')[0] for w in line.split())
         gold = [w.split('/')[1] for w in line.split()]
-        # print('segmentation: ' + ' '.join(segmented))
+        prediction = [word.tag[0][0][0] for word in mk.getTags(s)]
+        # print('input: ' + s)
         # print('prediction: ' + ' '.join(prediction))
         # print('gold: ' + ' '.join(gold))
         # print()
 
-        # 評価
         l_cor += len(gold)
         l_sys += len(prediction)
         l_lcs += lcs(prediction, gold)

@@ -96,7 +96,9 @@ def main():
     recall = l_lcs / l_cor
     precision = l_lcs / l_sys
     f1_score = (2 * recall * precision) / (recall + precision)
-    print(f'f1_score: {f1_score:.3}')
+    print(f'recall: {recall:0.3} ({l_lcs}/{l_cor})')
+    print(f'precision: {precision:0.3} ({l_lcs}/{l_sys})')
+    print(f'f1_score: {f1_score:0.3}')
 
 
 if __name__ == '__main__':
